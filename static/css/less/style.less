@@ -1,0 +1,63 @@
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+@media (max-width: 980px) {
+  /* Enable use of floated navbar text */
+  .navbar-text.pull-right {
+    float: none;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+// homepage and meal page
+.meal {
+  line-height: 1.358;
+}
+
+// homepage meal grid
+#meal-listings {
+  .meal {
+    min-height: 400px;
+    margin-bottom: 3%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  h2 {
+    padding-top: 10px;
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    a {
+      color: inherit;
+      cursor: text;
+      text-decoration: none;
+
+      &.btn {
+        cursor: pointer;
+      }
+    }
+  }
+  h2, p {
+    overflow: hidden;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, .3);
+    margin-left: 12px;
+    margin-right: 56px;
+  }
+  h2 a, h2 a:visited {
+    color: inherit;
+  }
+  .caption {
+    min-height: 110px;
+    color: #fff;
+    background-color: rgba(0,0,0,.3);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@import "composer.less";

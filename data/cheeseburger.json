@@ -1,0 +1,12 @@
+{
+	"id": "cheeseburger",
+	"title": "Cheeseburger",
+	"description": "Beef burger with pork bacon, cave-aged gruyere, and organic mixed greens on a sesame seed bun.",
+	"ingredients": [
+		"beef",
+		"pork",
+		"lettuce",
+		"cheese",
+		"bread"
+	]
+}

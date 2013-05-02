@@ -1,0 +1,10 @@
+{
+	"id": "brisket",
+	"title": "Beef brisket",
+	"description": "Smoked brisket rubbed in brown sugar with a side of BBQ baked beans, white toast, and pickled vegetables.",
+	"ingredients": [
+		"beef",
+		"beans",
+		"bread"
+	]
+}

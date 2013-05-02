@@ -1,0 +1,11 @@
+{
+	"id": "fried-chicken",
+	"title": "Fried chicken",
+	"description": "Buttermilk fried chicken cooked in lemon juice, honey, bay leaves, garlic, peppercorns, rosemary, thyme, parsley.",
+	"ingredients": [
+		"chicken",
+		"lemon",
+		"honey",
+		"pepper"
+	]
+}

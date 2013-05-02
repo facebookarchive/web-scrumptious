@@ -1,0 +1,44 @@
+#composer-message-data {
+  &:before {
+    content: " - ";
+  }
+
+  .friend {
+    &:after {
+      content: ", ";
+    }
+    &:last-child:after {
+      content: "";
+    }
+  }
+}
+
+#composer-friends-group-fields {
+  .friend {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 0;
+    padding-left: 5px;
+    background-color: rgb(222, 231, 248);
+    border-color: rgb(164, 189, 236);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    color: #18559D;
+
+    &:hover {
+      background-color: rgb(187, 206, 241);
+    }
+
+    a, button {
+      text-decoration: none;
+    }
+  }
+
+  button {
+    color: #627aad;
+    padding: 0 4px;
+    line-height: inherit;
+    padding-bottom: 3px;
+  }
+}
