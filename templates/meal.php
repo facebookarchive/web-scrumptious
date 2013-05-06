@@ -20,7 +20,7 @@
 if ( Facebook_Sample_Application::APP_NS ):
 function fb_async_after_init() { ?>
 jQuery(document).one("facebook-logged-in",function(){
-	jQuery.getScript("http://code.jquery.com/ui/1.10.2/jquery-ui.js").done(function(){
+	jQuery.getScript("http://code.jquery.com/ui/1.10.3/jquery-ui.js").done(function(){
 	jQuery.getScript(<?php echo json_encode( Facebook_Sample_Application::STATIC_BASE_URI . 'js/fb-demo-share.js' ); ?>).done(function(){
 		jQuery("#thehead").append( jQuery("<link />").attr({rel:"stylesheet",type:"text/css",href:<?php echo json_encode( Facebook_Sample_Application::STATIC_BASE_URI . 'css/jquery-ui-autocomplete.css' ) ?>}) );
 		FB_DEMO.share.init();
