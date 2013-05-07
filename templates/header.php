@@ -2,11 +2,12 @@
 <html<?php
 if ( Facebook_Sample_Application::LOCALE && strlen( Facebook_Sample_Application::LOCALE ) > 2 )
 	echo ' lang="' . substr( Facebook_Sample_Application::LOCALE, 0, 2 ) . '"';
-?>><head id="thehead"<?php
+?>>
+<head id="thehead"<?php
 // @link http://www.w3.org/TR/rdfa-syntax/#s_curies RDFa Core 1.1 CURIEs
 $prefixes = '';
 foreach ( $og['prefixes'] as $prefix => $reference ) {
-	' ' . $prefix . ': ' . $reference;
+	$prefixes .= ' ' . $prefix . ': ' . $reference;
 }
 if ( $prefixes )
 	echo ' prefix="' . ltrim( $prefixes ) . '"';
@@ -76,7 +77,9 @@ if ( function_exists( 'ogp_extras' ) )
 
 include_once( dirname(__FILE__) . '/base-styles.php' );
 include_once( dirname(__FILE__) . '/base-scripts.php' );
-?></head>
+?>
+
+</head>
 <body>
 <div class="navbar navbar-inverse navbar-fixed-top">
   <div class="navbar-inner">
