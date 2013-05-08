@@ -112,6 +112,16 @@ FB_DEMO.share = {
 					appendTo: "#composer-place-group",
 					autoFocus: true,
 					minLength: 3,
+					focus: function( event, ui ) {
+						// add consistency between mouse and keyboard events
+						if ( event.keyCode !== undefined ) {
+							var menu = $(this).data("ui-autocomplete").menu.element, focused = menu.find("li:has(a.ui-state-focus)");
+							menu.find(".ui-state-focus").removeClass("ui-state-focus");
+							focused.addClass("ui-state-focus");
+							menu=focused=null;
+						}
+						return false;
+					},
 					select: function( event, ui ) {
 						FB_DEMO.share.place.tagged = {id:ui.item.value, name:ui.item.label, link:ui.item.link};
 						FB_DEMO.share.build_with_at_text();
@@ -228,6 +238,16 @@ FB_DEMO.share = {
 					appendTo: "#composer-friends-group",
 					autoFocus: true,
 					minLength: 2,
+					focus: function( event, ui ) {
+						// add consistency between mouse and keyboard events
+						if ( event.keyCode !== undefined ) {
+							var menu = $(this).data("ui-autocomplete").menu.element, focused = menu.find("li:has(a.ui-state-focus)");
+							menu.find(".ui-state-focus").removeClass("ui-state-focus");
+							focused.addClass("ui-state-focus");
+							menu=focused=null;
+						}
+						return false;
+					},
 					select: function( event, ui ) {
 						FB_DEMO.share.friends.tagged[ui.item.value] = {name:ui.item.label, link:ui.item.link};
 						FB_DEMO.share.build_with_at_text();
