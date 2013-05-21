@@ -1,7 +1,7 @@
 <hr>
 
 <footer>
-  <p>&copy; <a href="https://developers.facebook.com/" title="Facebook Developers">Facebook</a> 2013</p>
+  <p>&copy; <a href="https://developers.facebook.com/" title="Facebook Developers">Facebook</a> 2013 | <a href="<?php echo htmlspecialchars( Facebook_Sample_Application::BASE_URI . 'terms.php' ); ?>" title="Terms of Service">Terms</a> | <a href="<?php echo htmlspecialchars( Facebook_Sample_Application::BASE_URI . 'privacy.php' ); ?>" title="Privacy Policy">Privacy</a></p>
 </footer>
 
 </div><!--/.fluid-container-->
