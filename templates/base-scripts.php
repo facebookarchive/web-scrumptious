@@ -1,6 +1,6 @@
 
 <!-- Load jQuery from remote CDN. fallback to local copy if fail -->
-<script id="jquery-js" src="http://code.jquery.com/jquery-2.0.0<?php echo $debug_file_suffix; ?>.js"></script>
+<script id="jquery-js" src="http://code.jquery.com/jquery-2.0.1<?php echo $debug_file_suffix; ?>.js"></script>
 <script>
 window.jQuery || document.write('<script src="<?php echo Facebook_Sample_Application::STATIC_BASE_URI; ?>js/jquery.min.js"><\/script>');
 
