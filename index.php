@@ -28,8 +28,8 @@ $og = array(
 		'fb' => 'http://ogp.me/ns/fb#'
 	),
 	'type' => 'website',
-	'title' => 'Meals with Friends sample web application',
-	'description' => 'Meals with Friends sample web application. Choose a meal, friends, and place before posting a story to your Facebook Timeline.'
+	'title' => 'Scrumptious sample web application',
+	'description' => 'Scrumptious sample web application. Choose a meal, friends, and place before posting a story to your Facebook Timeline.'
 );
 
 $page_url = Facebook_Sample_Application::BASE_URI;

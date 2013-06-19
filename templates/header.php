@@ -15,7 +15,7 @@ unset( $prefixes );
 ?>>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title><?php echo htmlspecialchars( $og['title'] ) . ( $page_url === Facebook_Sample_Application::BASE_URI ? '' : ' | Meals with Friends' ); ?></title>
+  <title><?php echo htmlspecialchars( $og['title'] ) . ( $page_url === Facebook_Sample_Application::BASE_URI ? '' : ' | Scrumptious' ); ?></title>
   <link rel="dns-prefetch" href="//code.jquery.com">
   <link rel="dns-prefetch" href="//connect.facebook.net">
 <?php
@@ -41,7 +41,7 @@ if ( Facebook_Sample_Application::STATIC_BASE_URI && isset( $_SERVER['SERVER_NAM
   <meta property="og:type" content="<?php echo htmlspecialchars( $og['type'] ); ?>">
   <meta property="og:url" content="<?php echo $page_url; ?>">
   <meta property="og:title" content="<?php echo htmlspecialchars( $og['title'] ); ?>">
-  <meta property="og:site_name" content="Meals with Friends">
+  <meta property="og:site_name" content="Scrumptious">
   <meta property="og:description" content="<?php echo htmlspecialchars( $og['description'] ); ?>">
 <?php
 if ( isset( $og['image'] ) ) {
@@ -84,7 +84,7 @@ include_once( dirname(__FILE__) . '/base-scripts.php' );
 <div class="navbar navbar-inverse navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container-fluid">
-      <a class="brand" href="<?php echo htmlspecialchars( Facebook_Sample_Application::BASE_URI ); ?>">Meals with Friends</a>
+      <a class="brand" href="<?php echo htmlspecialchars( Facebook_Sample_Application::BASE_URI ); ?>">Scrumptious</a>
       <p id="user-identity" class="navbar-text pull-right"></p>
     </div>
   </div>

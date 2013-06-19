@@ -1,20 +1,20 @@
-Installing Meals with Friends
+Installing Scrumptious Web
 =============================
 
 View the live demo
 ------------------
 
-See the finished product in action at [FacebookSampleApp.com](http://facebooksampleapp.com/ "Facebook Meals with Friends demo app")
+See the finished product in action at [FacebookSampleApp.com](http://facebooksampleapp.com/ "Scrumptious Web demo app")
 
 Place files on your webserver
 -----------------------------
 
-Meals with Friends requires a web server addressable from the public Internet running [PHP](http://www.php.net/) with [cURL enabled](http://www.php.net/manual/en/intro.curl.php).
+Scrumptious Web requires a web server addressable from the public Internet running [PHP](http://www.php.net/) with [cURL enabled](http://www.php.net/manual/en/intro.curl.php).
 
 Clone the repository from GitHub into a folder inside your website's document root.
 
-    git clone git@github.com:fbsamples/web-mealswithfriends.git mealswithfriends
-    cd mealswithfriends
+    git clone git@github.com:fbsamples/web-scrumptious.git scrumptious
+    cd scrumptious
 
 Initialize and update the [Facebook PHP SDK](https://github.com/facebook/facebook-php-sdk) [submodule](http://git-scm.com/book/en/Git-Tools-Submodules "git submodules").
 
@@ -31,12 +31,12 @@ Edit the `config.php` file with the appropriate values for your application, aud
 1. Specify a base URI, including the trailing slash, representing the URI to this directory's content on your webserver. e.g. `http://example.com/`
 1. Specify a static base URI, including the trailing slash, representing the URI to the sample's static content. e.g. `http://example.com/static/` if on the same server or `http://s.example.com/` if you choose to serve static files from a CDN or separate hostname.
 
-Meals with Friends overview
+Scrumptious Web overview
 ---------------------------
 
-The Meals with Friends web application allows a visitor to browse a list of meals and view a detail page with more information about a meal of interest.
+Scrumptious Web allows a visitor to browse a list of meals and view a detail page with more information about a meal of interest.
 
-The Meals with Friends web application paired with a properly configured Facebook application adds identity and sharing features powered by Facebook:
+Scrumptious Web paired with a properly configured Facebook application adds identity and sharing features powered by Facebook:
 
 * Share [basic Facebook information](https://developers.facebook.com/docs/reference/login/public-profile-and-friend-list/) with your Facebook application through [Facebook Login](https://developers.facebook.com/docs/concepts/login/) including his or her name, gender, and Facebook profile photo
 * Grant your Facebook application permission to publish new [Open Graph actions](https://developers.facebook.com/docs/opengraph/using-actions/) to his Facebook profile on his behalf
@@ -45,7 +45,7 @@ The Meals with Friends web application paired with a properly configured Faceboo
 External libraries
 ------------------
 
-Meals with Friends uses a few external libraries for demonstration purposes. The choice of these libraries for our example should demonstrate general development patterns but should not limit your development using your own language or libraries of choice.
+Scrumptious Web uses a few external libraries for demonstration purposes. The choice of these libraries for our example should demonstrate general development patterns but should not limit your development using your own language or libraries of choice.
 
 * [Bootstrap](http://twitter.github.io/bootstrap/ "Bootstrap front-end framework") CSS for a responsive layout adaptive to both desktop and mobile client widths and general CSS template styling; modal JavaScript to assist with showing and dismissing a modal share dialog. Bootstrap is licensed under the [Apache License version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
 * [jQuery](http://jquery.com/) JavaScript for DOM selectors, DOM manipulation, layout computations, event handling and general browser abstraction functions. jQuery is licensed under the [MIT license](http://opensource.org/licenses/MIT)
