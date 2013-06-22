@@ -5,8 +5,8 @@
   <header>
     <h1>Terms of Service</h1>
   </header>
-  <p>The Meals with Friends web application is provided by <a href="https://www.facebook.com/">Facebook</a> for demonstrative purposes only.</p>
-  <p>Publishing an Open Graph action will not cause food to spontaneously appear in your developer console. Facebook is not responsible for food cravings or inducing a desire to violate personal or religious beliefs while viewing tasty food options on Meals with Friends.</p>
+  <p>Scrumptious is provided by <a href="https://www.facebook.com/">Facebook</a> for demonstrative purposes only.</p>
+  <p>Publishing an Open Graph action will not cause food to spontaneously appear in your developer console. Facebook is not responsible for food cravings or inducing a desire to violate personal or religious beliefs while viewing tasty food options on Scrumptious.</p>
   <p>Please code responsibly. If you are unable to code responsibly perhaps <a href="http://wikipedia.org/wiki/Pair_programming">pair programming</a> can help.</p>
 </section>
 </div>

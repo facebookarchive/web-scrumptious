@@ -17,7 +17,7 @@ $og = array(
 	),
 	'type' => 'website',
 	'title' => 'Privacy Policy',
-	'description' => 'Meals with Friends does not store any personal data.'
+	'description' => 'Scrumptious does not store any personal data.'
 );
 
 $page_url = Facebook_Sample_Application::BASE_URI . 'privacy.php';

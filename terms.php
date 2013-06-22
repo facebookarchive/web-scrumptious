@@ -16,7 +16,7 @@ $og = array(
 	),
 	'type' => 'website',
 	'title' => 'Terms of Service',
-	'description' => 'Meals with Friends is a sample application intended to be used for demonstrative purposes only.'
+	'description' => 'Scrumptious is a sample application intended to be used for demonstrative purposes only.'
 );
 
 $page_url = Facebook_Sample_Application::BASE_URI . 'terms.php';
