@@ -30,6 +30,8 @@ if ( Facebook_Sample_Application::STATIC_BASE_URI && isset( $_SERVER['SERVER_NAM
   <meta name="description" content="<?php echo htmlspecialchars( $og['description'] ) ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Facebook">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="canonical" href="<?php echo $page_url ?>">
 
   <link rel="icon" type="image/vnd.microsoft.icon" href="<?php echo Facebook_Sample_Application::STATIC_BASE_URI; ?>favicon.ico" sizes="16x16">
@@ -81,13 +83,9 @@ include_once( dirname(__FILE__) . '/base-scripts.php' );
 
 </head>
 <body>
-<div class="navbar navbar-inverse navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container-fluid">
-      <a class="brand" href="<?php echo htmlspecialchars( Facebook_Sample_Application::BASE_URI ); ?>">Scrumptious</a>
-      <p id="user-identity" class="navbar-text pull-right"></p>
-    </div>
-  </div>
+<div class="navbar navbar-inverse">
+  <a class="navbar-brand pull-left" href="<?php echo htmlspecialchars( Facebook_Sample_Application::BASE_URI ); ?>">Scrumptious</a>
+  <div id="user-identity" class="pull-right"></div>
 </div><!--/navbar-->
 
 <!--
@@ -96,4 +94,4 @@ Assists the creation of new DOM elements positioned relative to the top of the p
 -->
 <div id="fb-root"></div>
 
-<div class="container-fluid">
+<div class="container">

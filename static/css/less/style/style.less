@@ -1,15 +1,29 @@
-body {
-  padding-top: 60px;
-  padding-bottom: 40px;
+@media only screen and (max-width:480px) {
+  // hide full name in smaller layouts
+  .facebook-name {
+    // Hide only visually, but have it available for screenreaders: h5bp.com/v
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
 }
 
-@media (max-width: 980px) {
-  /* Enable use of floated navbar text */
-  .navbar-text.pull-right {
-    float: none;
-    padding-left: 5px;
-    padding-right: 5px;
-  }
+// navigation bar
+.navbar {
+  // avoid navbar redraw
+  min-height: 55px;
+  // tighten whitespace
+  margin-bottom:0;
+}
+
+.navbar-btn {
+  margin-top: 14px;
+  margin-bottom: 15px;
 }
 
 // homepage and meal page
@@ -21,7 +35,6 @@ body {
 #meal-listings {
   .meal {
     min-height: 400px;
-    margin-bottom: 3%;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;

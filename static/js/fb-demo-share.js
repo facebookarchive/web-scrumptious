@@ -20,11 +20,11 @@ FB_DEMO.share = {
 		if ( message_data.length === 0 ) {
 			return;
 		}
-		var component = jQuery( "<span />" );
+		var component = jQuery( "<span>" );
 		if ( FB_DEMO.share.friends.tagged !== undefined && !jQuery.isEmptyObject( FB_DEMO.share.friends.tagged ) ) {
-			var friends = jQuery( "<span />" ).addClass("friends"). text( " " + FB_DEMO.share.friends.autocomplete.messages.intro_text + " " );
+			var friends = jQuery( "<span>" ).addClass("friends"). text( " " + FB_DEMO.share.friends.autocomplete.messages.intro_text + " " );
 			jQuery.each( FB_DEMO.share.friends.tagged, function( id, values ) {
-				friends.append( jQuery( "<a />" ).addClass("friend").attr({href:values.link,target:"_blank"}).text(values.name).data("fbid",id) );
+				friends.append( jQuery( "<a>" ).addClass("friend").attr({href:values.link,target:"_blank"}).text(values.name).data("fbid",id) );
 			} );
 			if ( !friends.is(":empty") ) {
 				component.append( friends );
@@ -32,7 +32,7 @@ FB_DEMO.share = {
 			friends=null;
 		}
 		if ( FB_DEMO.share.place.tagged !== undefined ) {
-			component.append( jQuery( "<span />" ).addClass( "place" ).text( " " + FB_DEMO.share.place.autocomplete.messages.intro_text + " " ).append( jQuery( "<a />" ).attr({href:FB_DEMO.share.place.tagged.link,target:"_blank"}).text(FB_DEMO.share.place.tagged.name) ) );
+			component.append( jQuery( "<span>" ).addClass( "place" ).text( " " + FB_DEMO.share.place.autocomplete.messages.intro_text + " " ).append( jQuery( "<a>" ).attr({href:FB_DEMO.share.place.tagged.link,target:"_blank"}).text(FB_DEMO.share.place.tagged.name) ) );
 		}
 
 		// clear any previously stored elements and their handlers
@@ -55,16 +55,16 @@ FB_DEMO.share = {
 		init: function() {
 		},
 		build_form_fields: function() {
-			return jQuery( "<div />" ).attr("id","composer-place-group").append( jQuery( "<input />" ).attr({type:"search",role:"combobox",id:"composer-place-field",autocomplete:"off",placeholder:FB_DEMO.share.place.messages.placeholder,"aria-label":FB_DEMO.share.place.messages.placeholder}) ).hide();
+			return jQuery( "<div>" ).attr("id","composer-place-group").append( jQuery( "<input>" ).addClass("form-control").attr({type:"search",role:"combobox",id:"composer-place-field",autocomplete:"off",placeholder:FB_DEMO.share.place.messages.placeholder,"aria-label":FB_DEMO.share.place.messages.placeholder}) ).hide();
 		},
 		build_toggle: function() {
-			var button = jQuery( "<button />" ).attr({
+			var button = jQuery( "<button>" ).attr({
 				"id": "toggle-place",
 				"type": "button",
 				"title": FB_DEMO.share.place.messages.add_location,
 				"aria-controls": "composer-place-group"
 			}).addClass("btn");
-			button.append( jQuery( "<img />" ).attr({
+			button.append( jQuery( "<img>" ).attr({
 				"alt": FB_DEMO.share.place.messages.icon,
 				"src": FB_DEMO.base_static_uri + "images/location.png",
 				"width": 32,
@@ -146,9 +146,9 @@ FB_DEMO.share = {
 			},
 			// override jQuery UI autocomplete default item listing
 			renderItem: function( ul, place ) {
-				var li = jQuery( "<li />" ).addClass("place").attr({"role":"option","aria-label":place.label}).mouseenter(function(){jQuery(this).addClass("ui-state-focus")}).mouseleave(function(){jQuery(this).removeClass("ui-state-focus")});
+				var li = jQuery( "<li>" ).addClass("place").attr({"role":"option","aria-label":place.label}).mouseenter(function(){jQuery(this).addClass("ui-state-focus")}).mouseleave(function(){jQuery(this).removeClass("ui-state-focus")});
 				if ( place.picture !== undefined ) {
-					li.append( jQuery( "<img />" ).attr({src:place.picture,alt:place.label,width:25,height:25}) );
+					li.append( jQuery( "<img>" ).attr({src:place.picture,alt:place.label,width:25,height:25}) );
 				}
 
 				var text_pieces = [place.label];
@@ -160,10 +160,10 @@ FB_DEMO.share = {
 						text_pieces.push( place.location.area );
 					}
 				}
-				li.append( jQuery( "<a />" ).addClass( "text" ).text( text_pieces.join( " • " ) ) );
+				li.append( jQuery( "<a>" ).addClass( "text" ).text( text_pieces.join( " • " ) ) );
 
 				if ( place.were_here_count !== undefined ) {
-					li.append( jQuery( "<div />" ).addClass( "subtext" ).text( FB_DEMO.share.place.autocomplete.messages.were_here.replace( /%s/i , FB_DEMO.share.format_number( place.were_here_count ) ) ) );
+					li.append( jQuery( "<div>" ).addClass( "subtext" ).text( FB_DEMO.share.place.autocomplete.messages.were_here.replace( /%s/i , FB_DEMO.share.format_number( place.were_here_count ) ) ) );
 				}
 
 				return li.appendTo( ul );
@@ -186,18 +186,18 @@ FB_DEMO.share = {
 			FB_DEMO.share.friends.tagged = {};
 		},
 		build_form_fields: function() {
-			return jQuery( "<div />" ).addClass("form-inline").attr("id", "composer-friends-group").append( jQuery("<ul />").addClass("unstyled inline").attr("id","composer-friends-group-fields").append( jQuery("<li />").append(
-				jQuery( "<input />" ).attr({type:"search",role:"combobox",id:"composer-friends-field",autocomplete:"off",placeholder:FB_DEMO.share.friends.messages.placeholder,"aria-label":FB_DEMO.share.friends.messages.placeholder})
+			return jQuery( "<div>" ).addClass("form-inline").attr("id", "composer-friends-group").append( jQuery("<ul>").addClass("list-unstyled list-inline").attr("id","composer-friends-group-fields").append( jQuery("<li>").append(
+				jQuery( "<input>" ).addClass("form-control").attr({type:"search",role:"combobox",id:"composer-friends-field",autocomplete:"off",placeholder:FB_DEMO.share.friends.messages.placeholder,"aria-label":FB_DEMO.share.friends.messages.placeholder})
 			) ) ).hide();
 		},
 		build_toggle: function() {
-			var button = jQuery( "<button />" ).attr({
+			var button = jQuery( "<button>" ).attr({
 				"id": "toggle-friends",
 				"type": "button",
 				"title": FB_DEMO.share.friends.messages.tag_friends,
 				"aria-controls": "composer-friends-group"
 			}).addClass("btn");
-			button.append( jQuery( "<img />" ).attr({
+			button.append( jQuery( "<img>" ).attr({
 				"alt": FB_DEMO.share.friends.messages.icon,
 				"src": FB_DEMO.base_static_uri + "images/friend.png",
 				"width": 32,
@@ -251,7 +251,7 @@ FB_DEMO.share = {
 					select: function( event, ui ) {
 						FB_DEMO.share.friends.tagged[ui.item.value] = {name:ui.item.label, link:ui.item.link};
 						FB_DEMO.share.build_with_at_text();
-						jQuery("#composer-friends-group-fields").prepend( jQuery( "<li />" ).data( "fbid", ui.item.value ).addClass( "friend" ).append( jQuery( "<a />" ).attr({href:ui.item.link,target:"_blank"}).text(ui.item.label) ).append( jQuery( "<button />" ).addClass("btn btn-link").attr({type:"button",title:FB_DEMO.share.friends.autocomplete.messages.remove.replace( /%s/i , ui.item.label)}).text("×").click(FB_DEMO.share.friends.autocomplete.remove_friend) ) );
+						jQuery("#composer-friends-group-fields").prepend( jQuery( "<li>" ).data( "fbid", ui.item.value ).addClass( "friend" ).append( jQuery( "<a>" ).attr({href:ui.item.link,target:"_blank"}).text(ui.item.label) ).append( jQuery( "<button>" ).addClass("btn btn-link").attr({type:"button",title:FB_DEMO.share.friends.autocomplete.messages.remove.replace( /%s/i , ui.item.label)}).text("×").click(FB_DEMO.share.friends.autocomplete.remove_friend) ) );
 						FB_DEMO.share.friends.autocomplete.search_field.autocomplete("close");
 						FB_DEMO.share.friends.autocomplete.search_field.val("");
 						FB_DEMO.share.friends.autocomplete.search_field.focus();
@@ -280,9 +280,9 @@ FB_DEMO.share = {
 			},
 			// override jQuery UI autocomplete default item listing
 			renderItem: function( ul, friend ) {
-				return jQuery( "<li />" ).addClass( "friend" ).attr( {"role": "option", "aria-label": friend.label} ).mouseenter(function(){jQuery(this).addClass("ui-state-focus")}).mouseleave(function(){jQuery(this).removeClass("ui-state-focus")}).append(
-					jQuery( "<img />" ).attr( {src: (friend.picture === undefined) ? "https:\/\/graph.facebook.com\/" + friend.value + "\/picture" : friend.picture, alt: friend.label, width:25, height:25} ) ).append(
-					jQuery( "<a />" ).addClass( "text" ).text( friend.label )
+				return jQuery( "<li>" ).addClass( "friend" ).attr( {"role": "option", "aria-label": friend.label} ).mouseenter(function(){jQuery(this).addClass("ui-state-focus")}).mouseleave(function(){jQuery(this).removeClass("ui-state-focus")}).append(
+					jQuery( "<img>" ).attr( {src: (friend.picture === undefined) ? "https:\/\/graph.facebook.com\/" + friend.value + "\/picture" : friend.picture, alt: friend.label, width:25, height:25} ) ).append(
+					jQuery( "<a>" ).addClass( "text" ).text( friend.label )
 				).appendTo( ul );
 			}
 		}
@@ -329,13 +329,13 @@ FB_DEMO.share = {
 			if ( meal.length === 0 ) {
 				return;
 			}
-			meal.before( jQuery("<div />").addClass("alert alert-success").append( jQuery("<strong />").text( FB_DEMO.share.messages.success + " ") ).append( jQuery("<a />").attr({"_target":"blank",href:FB_DEMO.share.story_uri(data.id) }).text( FB_DEMO.share.messages.view_on_facebook.replace( /%s/i, meal.data("mealtitle").toLowerCase() ) ) ) );
+			meal.before( jQuery("<div>").addClass("alert alert-success").append( jQuery("<strong>").text( FB_DEMO.share.messages.success + " ") ).append( jQuery("<a>").addClass("alert-link").attr({"_target":"blank",href:FB_DEMO.share.story_uri(data.id) }).text( FB_DEMO.share.messages.view_on_facebook.replace( /%s/i, meal.data("mealtitle").toLowerCase() ) ) ) );
 		}).fail(function(jqXHR){
 			if ( !jQuery.isPlainObject(jqXHR.responseJSON) || jqXHR.responseJSON.error === undefined ) {
 				return;
 			}
 
-			jQuery("#meal").before( jQuery("<div />").addClass("alert alert-error").text(jqXHR.responseJSON.error).prepend( jQuery("<strong />").text( FB_DEMO.share.messages.error + ": " ) ) );
+			jQuery("#meal").before( jQuery("<div>").addClass("alert alert-danger").text(jqXHR.responseJSON.error).prepend( jQuery("<strong>").text( FB_DEMO.share.messages.error + ": " ) ) );
 		}).always(function(){
 			jQuery("#composer-modal").modal("hide");
 		});
@@ -346,11 +346,11 @@ FB_DEMO.share = {
 		if ( social_actions.length === 0 ) {
 			return;
 		}
-		social_actions.append( jQuery("<div />").addClass("fb-like").attr({"data-layout":"button_count","data-send":"false","data-width":"90","data-show-faces":"false"}) );
+		social_actions.append( jQuery("<div>").addClass("fb-like").attr({"data-layout":"button_count","data-send":"false","data-width":"90","data-show-faces":"false"}) );
 		FB.XFBML.parse( social_actions[0] );
 	},
 	add_share_button: function() {
-		jQuery("#social-actions").append( jQuery( "<button />" ).addClass("btn").attr({id:"share-button",type:"button"}).text(FB_DEMO.share.messages.eat_action).click( function() {
+		jQuery("#social-actions").append( jQuery( "<button>" ).addClass("btn btn-default").attr({id:"share-button",type:"button"}).text(FB_DEMO.share.messages.eat_action).click( function() {
 			if ( ! FB_DEMO.share.maybe_add_share_composer() ) {
 				// prompt for publish_actions permission
 				FB.login( function(response){
@@ -389,32 +389,31 @@ FB_DEMO.share = {
     	}
 
     	jQuery.getScript(FB_DEMO.base_static_uri+"js/bootstrap-modal.min.js").done(function(){
-	    	modal = jQuery( "<div />" ).addClass("modal").attr({id:"composer-modal",role:"dialog","aria-labelledby":"modal-title"});
-	    	var form = jQuery( "<form />" ).attr("id","composer").submit(FB_DEMO.share.form_handler);
-	    	form.append( jQuery( "<input />" ).attr({"id":"composer-meal","type":"hidden"}).val(meal_id) );
+	    	var modal = jQuery( "<div>" ).addClass("modal-content"), form = jQuery( "<form>" ).attr("id","composer").submit(FB_DEMO.share.form_handler);
+	    	form.append( jQuery( "<input>" ).attr({"id":"composer-meal","type":"hidden"}).val(meal_id) );
 
-	    	var modal_body = jQuery("<div />").addClass("modal-body");
-	    	modal_body.append( jQuery( "<div />" ).attr( "id", "composer-message-group" ).addClass("control-group").append(
-				jQuery( "<label />" ).addClass("control-label").attr("for","composer-message").text(FB_DEMO.share.messages.custom_message)
+	    	var modal_body = jQuery("<div>").addClass("modal-body");
+	    	modal_body.append( jQuery( "<div>" ).attr( "id", "composer-message-group" ).addClass("form-group").append(
+				jQuery( "<label>" ).attr("for","composer-message").text(FB_DEMO.share.messages.custom_message)
 			).append(
-				jQuery( "<div />" ).addClass("controls").append( jQuery("<input />").addClass("input-xxlarge").attr( {id:"composer-message",type:"text",maxlength:1000,autocomplete:"off",placeholder:FB_DEMO.share.messages.custom_message_placeholder.replace( /%s/i, meal_title.toLowerCase() )} ) )
-			).append( jQuery( "<span />" ).attr("id","composer-message-data").hide() ) );
-			modal_body.append( jQuery( "<div />" ).attr("id","autocomplete-fields").append(
+				jQuery( "<div>" ).addClass("controls").append( jQuery("<input>").addClass("form-control input-large").attr( {id:"composer-message",type:"text",maxlength:1000,autocomplete:"off",placeholder:FB_DEMO.share.messages.custom_message_placeholder.replace( /%s/i, meal_title.toLowerCase() )} ) )
+			).append( jQuery( "<span>" ).attr("id","composer-message-data").hide() ) );
+			modal_body.append( jQuery( "<div>" ).attr("id","autocomplete-fields").append(
 				FB_DEMO.share.friends.build_form_fields()
 			).append(
 				FB_DEMO.share.place.build_form_fields()
 			) );
-			modal_body.append( jQuery( "<div />" ).addClass("btn-group").attr("id","composer-buttons").append(
+			modal_body.append( jQuery( "<div>" ).addClass("btn-group").attr("id","composer-buttons").append(
 				FB_DEMO.share.place.build_toggle()
 			).append(
 				FB_DEMO.share.friends.build_toggle()
 			) );
-			modal.append( jQuery("<div />").addClass("modal-header").append( jQuery("<button />").addClass("close").attr({type:"button","data-dismiss":"modal","aria-hidden":"true"}).text("×") ).append( jQuery("<h3 />").attr("id","modal-title").text( FB_DEMO.share.messages.action_text ) ) );
+			modal.append( jQuery("<div>").addClass("modal-header").append( jQuery("<button>").addClass("close").attr({type:"button","data-dismiss":"modal","aria-hidden":"true"}).text("×") ).append( jQuery("<h3>").attr("id","modal-title").addClass("modal-title").text( FB_DEMO.share.messages.action_text ) ) );
 			modal.append( modal_body );
 			modal_body=null;
-			modal.append( jQuery("<div />").addClass("modal-footer").append(jQuery("<button />").addClass("btn").attr({"data-dismiss":"modal","aria-hidden":"true"}).text(FB_DEMO.share.messages.close)).append( jQuery("<button />").addClass("btn btn-primary").attr("type","submit").text(FB_DEMO.share.messages.action_text) ) );
+			modal.append( jQuery("<div>").addClass("modal-footer").append(jQuery("<button>").addClass("btn").attr({"data-dismiss":"modal","aria-hidden":"true"}).text(FB_DEMO.share.messages.close)).append( jQuery("<button>").addClass("btn btn-primary").attr("type","submit").text(FB_DEMO.share.messages.action_text) ) );
 			form.append(modal);
-			meal.after(form);
+			meal.after( jQuery( "<div>" ).addClass("modal").attr({id:"composer-modal",role:"dialog","aria-labelledby":"modal-title"}).append( jQuery("<div>").addClass("modal-dialog").append(form) ) );
 			jQuery("#composer-modal").modal();
 			FB_DEMO.share.place.init();
 			FB_DEMO.share.friends.init();

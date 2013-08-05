@@ -1,7 +1,7 @@
 <?php include_once( dirname(__FILE__) . '/header.php' ); ?>
 
-<div class="row-fluid">
-<section class="span6 offset3" role="main">
+<div class="row">
+<section class="col-12 col-sm-6 col-sm-offset-3 col-lg-6 col-lg-offset-3" role="main">
   <header>
     <h1>Terms of Service</h1>
   </header>
