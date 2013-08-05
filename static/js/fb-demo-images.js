@@ -74,7 +74,7 @@ FB_DEMO.images = {
 				return;
 			}
 			container.empty();
-			container.append( jQuery("<img />").attr({
+			container.append( jQuery("<img />").addClass("img-responsive").attr({
 				alt: meal_container.data("mealtitle"),
 				src: image_uri
 			}) );
