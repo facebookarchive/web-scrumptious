@@ -47,6 +47,6 @@ External libraries
 
 Scrumptious Web uses a few external libraries for demonstration purposes. The choice of these libraries for our example should demonstrate general development patterns but should not limit your development using your own language or libraries of choice.
 
-* [Bootstrap](http://twitter.github.io/bootstrap/ "Bootstrap front-end framework") CSS for a responsive layout adaptive to both desktop and mobile client widths and general CSS template styling; modal JavaScript to assist with showing and dismissing a modal share dialog. Bootstrap is licensed under the [Apache License version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
+* [Bootstrap](http://twbs.github.io/bootstrap/ "Bootstrap front-end framework") CSS for a responsive layout adaptive to both desktop and mobile client widths and general CSS template styling; modal JavaScript to assist with showing and dismissing a modal share dialog. Bootstrap is licensed under the [Apache License version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
 * [jQuery](http://jquery.com/) JavaScript for DOM selectors, DOM manipulation, layout computations, event handling and general browser abstraction functions. jQuery is licensed under the [MIT license](http://opensource.org/licenses/MIT)
 * [JQuery UI](http://jqueryui.com/) autocomplete widget to display search results for Facebook friends and Facebook places. jQuery UI is licensed under the [MIT license](http://opensource.org/licenses/MIT)
